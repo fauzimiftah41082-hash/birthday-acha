@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Acha 💙💗</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HALAMAN LOGIN -->
+    <section id="loginPage" class="login-page">
+
+        <div class="login-card">
+
+            <div class="lock-icon">🔐</div>
+
+            <p class="small-title">
+                A LITTLE SURPRISE FOR YOU ✨
+            </p>
+
+            <h1>
+                Birthday<br>
+                <span>Access</span>
+            </h1>
+
+            <p class="login-text">
+                Sebelum masuk, jawab satu pertanyaan kecil dulu...
+            </p>
+
+            <label for="birthday">
+                📅 Kapan hari spesialmu?
+            </label>
+
+            <input type="date" id="birthday">
+
+            <button onclick="checkBirthday()">
+                Masuk ke Surprise ✨
+            </button>
+
+            <p id="errorMessage"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- HALAMAN UTAMA -->
+    <main id="mainPage" class="hidden">
+
+        <!-- PEMBUKAAN -->
+        <section class="hero">
+
+            <div class="floating-hearts">
+                💙 💗 ✨ 💙 💗
+            </div>
+
+            <p class="welcome">
+                WELCOME, ACHA ✨
+            </p>
+
+            <h1>
+                Happy Birthday
+                <span>Acha 🎂</span>
+            </h1>
+
+            <p class="hero-text">
+                Hari ini adalah hari spesial seseorang yang juga spesial ✨
+            </p>
+
+            <button
+                class="scroll-button"
+                onclick="scrollToSection('message')">
+
+                Scroll untuk melihat surprise ↓
+
+            </button>
+
+        </section>
+
+
+        <!-- FOTO -->
+        <section class="photo-section">
+
+            <div class="section-title">
+
+                <p>
+                    ✨ A LITTLE MOMENT OF YOU ✨
+                </p>
+
+                <h2>
+                    Someone Special 💙
+                </h2>
+
+            </div>
+
+
+            <div class="main-photo-card">
+
+                <img
+                    src="images/acha-1.jpeg"
+                    alt="Foto Acha">
+
+                <div class="photo-caption">
+
+                    <span>👑</span>
+
+                    <p>
+                        Today is your special day
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PESAN -->
+        <section
+            id="message"
+            class="message-section">
+
+            <div class="letter-card">
+
+                <div class="letter-icon">
+                    💌
+                </div>
+
+                <p class="letter-label">
+                    A LITTLE MESSAGE FOR YOU
+                </p>
+
+                <h2>
+                    Untuk Acha 💙💗
+                </h2>
+
+
+                <div class="message-text">
+
+                    <p>
+                        <strong>
+                            Happy Birthday, Acha! 🎂✨
+                        </strong>
+                    </p>
+
+
+                    <p>
+                        Selamat ulang tahun yaa!
+                        Semoga di umur yang baru ini,
+                        Acha selalu diberikan kesehatan,
+                        kebahagiaan, dan banyak hal baik
+                        yang datang dalam hidup.
+                    </p>
+
+
+                    <p>
+                        Semoga semua impian dan keinginan
+                        Acha bisa tercapai satu per satu.
+                        Jangan lupa untuk selalu menjadi
+                        diri sendiri, karena Acha itu sudah
+                        cukup spesial dengan caranya sendiri ✨
+                    </p>
+
+
+                    <p>
+                        Terima kasih sudah menjadi teman
+                        dan menjadi bagian dari cerita-cerita
+                        kecil yang pernah kita lalui.
+                        Semoga ke depannya kita masih bisa
+                        punya lebih banyak cerita seru lagi.
+                    </p>
+
+
+                    <p>
+                        Sekali lagi,
+                        <strong>
+                            Happy Birthday, Acha! 💙💗
+                        </strong>
+                    </p>
+
+
+                    <p>
+                        Semoga hari spesial ini menjadi awal
+                        dari banyak hal indah yang akan datang
+                        🌸✨
+                    </p>
+
+                </div>
+
+
+                <div class="signature">
+
+                    — From your friend, Miftah 💙
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GALERI FOTO -->
+        <section class="gallery-section">
+
+            <div class="section-title">
+
+                <p>
+                    📸 LITTLE MEMORIES
+                </p>
+
+                <h2>
+                    Keep Smiling ✨
+                </h2>
+
+            </div>
+
+
+            <div class="gallery">
+
+                <div class="gallery-card">
+
+                    <img
+                        src="images/acha-1.jpeg"
+                        alt="Acha">
+
+                </div>
+
+
+                <div class="gallery-card second">
+
+                    <img
+                        src="images/acha-2.jpeg"
+                        alt="Acha">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SURPRISE -->
+        <section class="surprise-section">
+
+            <div
+                class="gift-box"
+                onclick="openGift()">
+
+                🎁
+
+            </div>
+
+
+            <h2>
+                One Last Surprise ✨
+            </h2>
+
+
+            <p>
+                Klik hadiah ini untuk membuka
+                pesan terakhir 💙💗
+            </p>
+
+
+            <button onclick="openGift()">
+
+                Open Your Gift 🎁
+
+            </button>
+
+
+            <div
+                id="finalMessage"
+                class="final-message hidden">
+
+                <h2>
+                    🎉 Surprise! 🎉
+                </h2>
+
+
+                <p>
+                    Semoga hari ulang tahunmu penuh
+                    dengan senyum, kebahagiaan,
+                    dan hal-hal indah yang tidak terduga ✨
+                </p>
+
+
+                <h1>
+                    Happy Birthday, Acha! 💙💗
+                </h1>
+
+
+                <p>
+                    Jangan lupa bahagia hari ini yaa! 🌸
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <p>
+                Made with 💙💗 and a little bit of code
+            </p>
+
+            <p>
+                For Acha ✨
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
